@@ -47,10 +47,15 @@ $(function(){
 	/*=========================================================================
 		Navigation Functions
 	=========================================================================*/
+	$('.menu-btn').on('mouseover', function(){
+		$('.menu').fadeIn(300);
+	});
+
 	$('.section-toggle').on('click', function(){
 		var $this = $(this),
 			sect = $( '#' + $this.data('section') ),
-			current_sect = $('.section.active');
+			current_sect = $('.section.active'),
+			menu = $('.menu');
 		if(sect.length == 1){
 			if( sect.hasClass('active') == false && $('body').hasClass('section-switching') == false ){
 				$('body').addClass('section-switching');
@@ -66,6 +71,7 @@ $(function(){
 					current_sect.removeClass('active');
 					sect.addClass('active');
 				}, 1250);
+				menu.fadeOut(300);
 				if( sect.hasClass('border-d') ){
 					$('body').addClass('border-dark');
 				}else{
