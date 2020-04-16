@@ -893,6 +893,7 @@ body.section-switching.up .animation-block{
 }
 .timeline > li > .timeline-content > em > span{
 	margin-right:10px;
+	color: white;
 }
 .timeline > li > .timeline-content > p{
 	margin:0;
